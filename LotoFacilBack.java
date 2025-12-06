@@ -52,4 +52,15 @@ public class LotoFacilBack {
 
         return acertos;
     }
+    
+     // coloca o valor das apostas conforme a quantidade de números selecionados
+    public static double calcularValorAposta(int qtd) {
+        return switch (qtd) {
+            case 15 -> 3.50;
+            case 16 -> 56.00;
+            case 17 -> 476.00;
+            case 18 -> 2856.00;
+            default -> 0.0;
+        };
+    }
 }
