@@ -63,7 +63,7 @@ public class LotoFacilBack {
             default -> 0.0;
         };
     }
-}
+
 
 
 // Gera uma mensagem com resultado da aposta
@@ -73,4 +73,5 @@ public static String gerarMensagemResultado(List<Integer> aposta, List<Integer> 
     List<Integer> numsAcertados = obterAcertos(aposta, sorteio);
 
     return "Você acertou " + acertos + " números! Acertos: " + numsAcertados;
+ }
 }
