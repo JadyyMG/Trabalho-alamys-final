@@ -8,11 +8,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-
 public class LotoFacilBack {
 
     // Gera 15 números sorteados aleatórios entre 1 e 25
