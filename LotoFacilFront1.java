@@ -72,4 +72,3 @@ public class LotoFacilFront1 extends JFrame {
           );
          }
         }
-
