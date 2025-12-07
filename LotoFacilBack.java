@@ -75,3 +75,15 @@ public static String gerarMensagemResultado(List<Integer> aposta, List<Integer> 
     return "Você acertou " + acertos + " números! Acertos: " + numsAcertados;
  }
 }
+
+// Probabilidade de Ganhar
+// Double: usado para guardar números decimais;
+// nCr: calcula combinações matemáticas, que fazem parte da fórmula de probabilidade;
+public static double probExact(int m, int r) {
+
+    double acertos = nCr(15, r);      // combinações de acertos
+    double erros   = nCr(10, m - r);  // combinações de erros
+    double total   = nCr(25, m);      // total de combinações possíveis
+
+    return (acertos * erros) / total;
+}
