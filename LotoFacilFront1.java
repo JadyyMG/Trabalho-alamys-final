@@ -36,7 +36,7 @@ public class LotoFacilFront1 extends JFrame {
             painelNumeros.add(botao);
         }
 
-        // PAINEL DE INFORMAÇÕES 
+        // PAINEL DE INFORMAÇÕES  
         
         JPanel painelInfo = new JPanel(new BorderLayout());
 
