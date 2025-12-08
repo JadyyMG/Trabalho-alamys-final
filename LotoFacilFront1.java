@@ -68,6 +68,33 @@ public class LotoFacilFront1 extends JFrame {
                     "(back-end).",
                     "Calcular",
                     JOptionPane.INFORMATION_MESSAGE);
+            private void alternarSelecao(int numero) {
+        if (selecionados.contains(numero)) {
+            selecionados.remove(Integer.valueOf(numero));
+            botoesNumeros[numero - 1].setBackground(new Color(230, 238, 245));
+        } else {
+            if (selecionados.size() >= 18) return;
+            selecionados.add(numero);
+            botoesNumeros[numero - 1].setBackground(Color.GREEN);
+        }
+
+        atualizarInfo();
+    }
+
+    private void atualizarInfo() {
+        lblSelecionados.setText("Selecionados: " + selecionados.size());
+        double valor = calcularValorAposta(selecionados.size());
+
+        if (valor == 0) {
+            lblValorAposta.setText("Valor da aposta: ---");
+            btnCalcular.setEnabled(false);
+        } else {
+            lblValorAposta.setText("Valor da aposta: R$ " + moneyFormat.format(valor));
+            btnCalcular.setEnabled(true);
+        }
+
+        atualizarProbabilidades();
+    }
            }
           );
          }
